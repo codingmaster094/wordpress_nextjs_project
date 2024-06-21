@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 export default function Page() {
   const { Pageslug } = useParams(); // Extract the page slug using useParams
   const [pageData, setPageData] = useState(null);
-
+console.log('Pageslug', Pageslug)
   // Fetch page data when Pageslug changes
   useEffect(() => {
     async function fetchPageData() {

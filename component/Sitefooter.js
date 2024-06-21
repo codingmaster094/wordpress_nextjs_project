@@ -14,7 +14,7 @@ export default function SiteFooter() {
             <Link href="/Blog">BLOG</Link>
           </li>
           <li>
-            <Link href="/about">ABOUT</Link>
+            <Link href="/about-us">ABOUT</Link>
           </li>
           <li>
             <Link href="/contact">CONATCT</Link>

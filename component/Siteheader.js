@@ -20,7 +20,7 @@ export default function SiteHeader({ className }) {
                         <Link href="/Blog">Blog</Link>
                     </li>
                     <li>
-                        <Link href="/about">About</Link>
+                        <Link href="/about-us">About</Link>
                     </li>
                     
                     <li>
