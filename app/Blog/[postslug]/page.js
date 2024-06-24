@@ -67,39 +67,39 @@ export default function Post() {
       </section>
       <article className={rubik.className}>
         <section
-          className="hero-area h-[60vh] min-h-[3rem] bg-no-repeat bg-cover bg-center relative"
+          className="hero-area h-[60vh] min-h-[3rem] bg-no-repeat bg-cover bg-center relative pt-3 px-3"
           style={{ backgroundImage: `url(${featuredImage})` }}
         >
           <div className="absolute inset-0 bg-slate-900 opacity-40"></div>
           <div className="container mx-auto h-full flex flex-col justify-center lg:max-w-4xl">
-            <h1 className={`${roboto_slab.className} text-6xl text-center text-slate-100 relative z-10 py-8 mt-12`}>
+            <h1 className={`${roboto_slab.className}  sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-slate-100 relative z-10  py-4 sm:py-6 md:py-8  mt-12 sm:mt-10 md:mt-12`}>
               {SinglePosts.title}
             </h1>
-            <div className="pb-4 text-slate-100 z-10">
+            <div className="pb-4 text-md sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-100 z-10">
               Posted By Dipak Gawale, Last updated on: <Date dateString={SinglePosts.modified} />
             </div>
             <div
               dangerouslySetInnerHTML={{ __html: SinglePosts.excerpt }}
-              className="relative z-10 text-left text-slate-200 text-2xl pl-4 border-l-4 border-lime-200"
+              className="relative z-10  text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-left text-slate-200  pl-4 border-l-4 border-lime-200"
             />
           </div>
         </section>
         <section className="content-area py-8">
           <div
             dangerouslySetInnerHTML={{ __html: SinglePosts.content }}
-            className="post-content max-w-4xl mx-auto"
+            className="post-content max-w-4xl mx-auto p-3 sm:text-sm md:text-lg lg:text-xl xl:text-1xl"
           />
         </section>
       </article>
 
-      <div className="container mx-auto lg:max-w-4xl">
-        <h3 className="text-xl py-2 my-4 border-l-4 border-l-lime-300 pl-4">
+      <div className="container mx-auto lg:max-w-4xl p-3">
+        <h3 className="text-md lg:text-xl py-2 my-4 border-l-4 border-l-lime-300 pl-4">
           {commentCount ? commentCount : "No"} comments on this post so far:
         </h3>
         <CommentForm postId={SinglePosts.databaseId} />
       </div>
 
-      <div className="container mx-auto lg:max-w-4xl">
+      <div className="container mx-auto lg:max-w-4xl p-3">
         <section>
           <ul>
             {comments?.nodes?.length ? (

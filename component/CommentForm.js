@@ -71,7 +71,7 @@ export default function CommentForm({ postId }) {
 
   return (
     <>
-      <h3 className="text-2xl pb-4 mb-4 border-b">Add your Thoughts:</h3>
+      <h3 className="text-md lg:text-2xl pb-4 mb-4 border-b">Add your Thoughts:</h3>
       <form className="comment-form" onSubmit={handleSubmit} noValidate>
         <div className="mb-4">
           <label htmlFor="author" className="block mb-2">Name:</label>

@@ -36,12 +36,12 @@ console.log('Pageslug', Pageslug)
       <section className="bg-slate-700">
         <SiteHeader className="header-blog-home z-10 relative" />
       </section>
-      <section className="content-area py-8">
+      <section className="content-area py-8 px-3">
         <article>
-          <h1 className="text-6xl text-center text-slate-700 py-8">{pageData.title}</h1>
+          <h1 className="text-xl lg:text-6xl text-center text-slate-700 py-8">{pageData.title}</h1>
           <div 
             dangerouslySetInnerHTML={{ __html: pageData.content }} 
-            className="post-content container mx-auto lg:max-w-4xl" 
+            className="post-content container mx-auto lg:max-w-4xl text-sm lg:text-1xl" 
           />
         </article>
       </section>

@@ -49,8 +49,8 @@ export default function ContactHome() {
         <SiteHeader className="header-blog-home z-10 relative" />
       </section>
       <section>
-        <h1 className="text-4xl text-center text-slate-700 py-8">Contact Us</h1>
-        <form className="max-w-sm mx-auto" onSubmit={handleSubmit}> {/* Corrected function name */}
+        <h1 className="text-4xl text-center text-slate-700 py-8 ">Contact Us</h1>
+        <form className="max-w-sm mx-auto p-3" onSubmit={handleSubmit}> {/* Corrected function name */}
           <div className="mb-5">
             <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
               First Name

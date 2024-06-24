@@ -1,4 +1,4 @@
-'use client'; // Add this line to mark the component as a client component
+"use client"; // Add this line to mark the component as a client component
 
 import Head from "next/head";
 import Link from "next/link";
@@ -24,7 +24,7 @@ export default function BlogHome({ initialPosts }) {
     };
     fetchInitialPosts();
   }, []);
-   
+
   return (
     <>
       <Head>
@@ -34,36 +34,41 @@ export default function BlogHome({ initialPosts }) {
       <section className="bg-slate-700 bg-opacity-70 absolute w-full z-20">
         <SiteHeader className="header-blog-home z-10 relative" />
       </section>
-      <div className="bg-cover h-[50vh] min-h-[20rem] bg-[url('/home.jpg')] relative">
-        <div className="absolute bg-slate-900 inset-0 z-0 opacity-40">
-          <div className="container lg:max-w-4xl mx-auto"></div>
+      <div className="bg-cover h-[50vh] min-h-[20rem] bg-[url('/home.jpg')] flex justify-center items-center w-full relative">
+        <div>
+          <div className="absolute bg-slate-900 inset-0 z-0 opacity-40">
+            <div className="container lg:max-w-4xl mx-auto"></div>
+          </div>
+          <h1 className="text-6xl text-center text-slate-100 relative z-10">
+            BLOG
+          </h1>
+          <p className="relative text-center z-10 text-slate-100 text-2xl">
+            Read our latest articles
+          </p>
         </div>
-        <h1 className="text-6xl text-center text-slate-100 relative z-10 py-8">
-          BLOG
-        </h1>
-        <p className="relative text-center z-10 text-slate-100 text-2xl">
-          Read our latest articles
-        </p>
       </div>
       <main>
         <section className="container mx-auto lg:max-w-5xl post-list mt-4">
           <ul>
             {posts?.nodes?.map((post) => (
-              <li key={post.slug} className="grid grid-cols-5 gap-4 mb-4">
-                <div className="col-span-2">
+              <li
+                key={post.slug}
+                className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-4 p-3"
+              >
+                <div className="md:col-span-2">
                   <FeaturedImage post={post} />
                 </div>
-                <div className="col-span-3">
+                <div className="md:col-span-3">
                   <h2 className="py-4">
                     <Link
-                      className="text-blue-400 text-2xl hover:text-blue-600"
+                      className="text-blue-400 text-md lg:text-2xl hover:text-blue-600"
                       href={`Blog/${post.slug}`}
                     >
                       {post.title}
                     </Link>
                   </h2>
                   <div className="py-4">
-                    Published On : <Date dateString={post.date} />
+                    Published On: <Date dateString={post.date} />
                   </div>
                   <div
                     className="text-lg"
